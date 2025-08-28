@@ -1,5 +1,11 @@
 ## Otsu Thresholding Implementation
 
+# Lab Codes
+
+Python scripts and notebooks used in lab sessions.
+
+[<img src="Assignments/Assignment01/A1.png" alt="Lecture Preview" width="600">](https://github.com/mahrin/INF250_image_processing/blob/644b71294bcc366383e8aca1cc2eff24ee97927e/Assignments/Assignment01/A1.png)
+
 This project demonstrates an implementation of **Otsu’s thresholding algorithm** from scratch in Python.  
 
 ### What it does
