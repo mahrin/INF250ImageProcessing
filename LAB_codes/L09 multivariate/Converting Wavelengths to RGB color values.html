@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)https://www.en.silicann.com/blog/post/wavelength-color/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Converting Wavelengths to RGB color values</title>
+    
+    <link href="https://www.en.silicann.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Color Sensors by Silicann Systems Full Atom Feed">
+    <link href="https://www.en.silicann.com/feeds/blog.atom.xml" type="application/atom+xml" rel="alternate" title="Color Sensors by Silicann Systems Categories Atom Feed">
+<!--<base href="https://www.en.silicann.com/">--><base href=".">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="facebook-domain-verification" content="z6qo3xoovltku72zak2jgwnhxl8m8s">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://www.en.silicann.com/resources/img/gb-facebook.jpg">
+<link rel="shortcut icon" type="image/x-icon" href="https://www.en.silicann.com/resources/img/favicon.ico">
+
+<link rel="preload" as="font" type="font/woff" crossorigin="" href="https://www.en.silicann.com/resources/fonts/opensans/open-sans-v18-latin-300.woff">
+<link rel="preload" as="font" type="font/woff" crossorigin="" href="https://www.en.silicann.com/resources/fonts/opensans/open-sans-v18-latin-regular.woff">
+<link rel="preload" as="font" type="font/woff" crossorigin="" href="https://www.en.silicann.com/resources/fonts/opensans/open-sans-v18-latin-600.woff">
+<link rel="preload" as="font" type="font/woff" crossorigin="" href="https://www.en.silicann.com/resources/fonts/opensans/open-sans-v18-latin-700.woff">
+
+
+<link href="./Converting Wavelengths to RGB color values_files/styles2.css" rel="stylesheet">
+<link rel="preload" as="font" type="font/woff" crossorigin="" href="https://www.en.silicann.com/resources/fonts/essential-icons/essential-light/essential-light-fonts/essential-light.woff">
+
+<style>
+@charset "UTF-8";
+
+@font-face {
+  font-family: "essential-light";
+  src: url("/resources/fonts/essential-icons/essential-light/essential-light-fonts/essential-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[data-icon]:before {
+  font-family: "essential-light";
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "essential-light";
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-essential-light-18-plus-square:before {
+  content: "p";
+}
+
+#header .mod_navigation ul.level_2 .primary {
+    font-weight: 600;
+}
+
+#header .mod_navigation ul.level_2 .secondary {
+    padding-left: 35px;
+}
+
+</style>
+<meta name="google-site-verification" content="xX_D7eVPsoyZJv8EqX6X5896BL39sH89vZwFGZDXjbE">
+<meta name="google-site-verification" content="S2JzeV6G9ilKMsBD8K6csp_Y1KNAhwuyhDRBDmWFoC4">
+
+<script type="text/javascript" async="" defer="" src="./Converting Wavelengths to RGB color values_files/matomo.js.download"></script><script defer="" type="text/javascript" src="./Converting Wavelengths to RGB color values_files/klaroconfig.js.download"></script>
+<script defer="" type="text/javascript" src="./Converting Wavelengths to RGB color values_files/klaro.js.download"></script>
+
+
+
+
+    <meta name="description" content="A brief description of your site">
+
+
+<style data-context="klaro-styles">.klaro{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro button{font-family:inherit;font-family:var(--font-family, inherit);font-size:14px;font-size:var(--font-size, 14px)}.klaro.cm-as-context-notice{height:100%;padding-bottom:12px;padding-top:12px}.klaro .cookie-modal .cm-switch-container,.klaro .context-notice .cm-switch-container,.klaro .cookie-notice .cm-switch-container{border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-color:#c8c8c8;border-bottom-color:var(--light2, #c8c8c8);display:block;position:relative;padding:10px;padding-left:66px;line-height:20px;vertical-align:middle;min-height:40px}.klaro .cookie-modal .cm-switch-container:last-child,.klaro .context-notice .cm-switch-container:last-child,.klaro .cookie-notice .cm-switch-container:last-child{border-bottom:0}.klaro .cookie-modal .cm-switch-container:first-child,.klaro .context-notice .cm-switch-container:first-child,.klaro .cookie-notice .cm-switch-container:first-child{margin-top:0}.klaro .cookie-modal .cm-switch-container p,.klaro .context-notice .cm-switch-container p,.klaro .cookie-notice .cm-switch-container p{margin-top:0}.klaro .cookie-modal .cm-switch,.klaro .context-notice .cm-switch,.klaro .cookie-notice .cm-switch{position:relative;display:inline-block;width:50px;height:30px}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider{background-color:#1a936f;background-color:var(--green1, #1a936f);opacity:0.6}.klaro .cookie-modal .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.half-checked:checked+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8}.klaro .cookie-modal .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input.only-required+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input.only-required+.cm-list-label .slider::before{-ms-transform:translateX(10px);transform:translateX(10px)}.klaro .cookie-modal .cm-list-input.required:checked+.cm-list-label .slider,.klaro .context-notice .cm-list-input.required:checked+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input.required:checked+.cm-list-label .slider{background-color:#24cc9a;background-color:var(--green2, #24cc9a);opacity:0.8;cursor:not-allowed}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal .cm-list-input,.klaro .context-notice .cm-list-input,.klaro .cookie-notice .cm-list-input{position:absolute;top:0;left:0;opacity:0;width:50px;height:30px}.klaro .cookie-modal .cm-list-title,.klaro .context-notice .cm-list-title,.klaro .cookie-notice .cm-list-title{font-size:0.9em;font-weight:600}.klaro .cookie-modal .cm-list-description,.klaro .context-notice .cm-list-description,.klaro .cookie-notice .cm-list-description{color:#7c7c7c;color:var(--dark3, #7c7c7c);font-size:0.9em;padding-top:4px}.klaro .cookie-modal .cm-list-label .cm-switch,.klaro .context-notice .cm-list-label .cm-switch,.klaro .cookie-notice .cm-list-label .cm-switch{position:absolute;left:0}.klaro .cookie-modal .cm-list-label .slider,.klaro .context-notice .cm-list-label .slider,.klaro .cookie-notice .cm-list-label .slider{background-color:#f2f2f2;background-color:var(--white2, #f2f2f2);position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;transition:0.4s;width:50px;display:inline-block}.klaro .cookie-modal .cm-list-label .slider::before,.klaro .context-notice .cm-list-label .slider::before,.klaro .cookie-notice .cm-list-label .slider::before{background-color:#e6e6e6;background-color:var(--white3, #e6e6e6);position:absolute;content:'';height:20px;width:20px;left:5px;bottom:5px;transition:0.4s}.klaro .cookie-modal .cm-list-label .slider.round,.klaro .context-notice .cm-list-label .slider.round,.klaro .cookie-notice .cm-list-label .slider.round{border-radius:30px}.klaro .cookie-modal .cm-list-label .slider.round::before,.klaro .context-notice .cm-list-label .slider.round::before,.klaro .cookie-notice .cm-list-label .slider.round::before{border-radius:50%}.klaro .cookie-modal .cm-list-label input:focus+.slider,.klaro .context-notice .cm-list-label input:focus+.slider,.klaro .cookie-notice .cm-list-label input:focus+.slider{box-shadow-color:#48dfb2;box-shadow-color:var(--green3, #48dfb2);box-shadow:0 0 1px var(color, green3)}.klaro .cookie-modal .cm-list-label input:checked+.slider::before,.klaro .context-notice .cm-list-label input:checked+.slider::before,.klaro .cookie-notice .cm-list-label input:checked+.slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .cm-list-input:focus+.cm-list-label .slider,.klaro .context-notice .cm-list-input:focus+.cm-list-label .slider,.klaro .cookie-notice .cm-list-input:focus+.cm-list-label .slider{box-shadow:0 4px 6px 0 rgba(125,125,125,0.2),5px 5px 10px 0 rgba(125,125,125,0.19)}.klaro .cookie-modal .cm-list-input:checked+.cm-list-label .slider::before,.klaro .context-notice .cm-list-input:checked+.cm-list-label .slider::before,.klaro .cookie-notice .cm-list-input:checked+.cm-list-label .slider::before{-ms-transform:translateX(20px);transform:translateX(20px)}.klaro .cookie-modal .slider,.klaro .context-notice .slider,.klaro .cookie-notice .slider{box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}.klaro .cookie-modal a,.klaro .context-notice a,.klaro .cookie-notice a{color:#1a936f;color:var(--green1, #1a936f);text-decoration:none}.klaro .cookie-modal p,.klaro .cookie-modal strong,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice strong,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice strong,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{color:#fafafa;color:var(--light1, #fafafa)}.klaro .cookie-modal p,.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal ul,.klaro .cookie-modal li,.klaro .context-notice p,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice ul,.klaro .context-notice li,.klaro .cookie-notice p,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice ul,.klaro .cookie-notice li{display:block;text-align:left;margin:0;padding:0;margin-top:0.7em}.klaro .cookie-modal h1,.klaro .cookie-modal h2,.klaro .cookie-modal h3,.klaro .cookie-modal h4,.klaro .cookie-modal h5,.klaro .cookie-modal h6,.klaro .context-notice h1,.klaro .context-notice h2,.klaro .context-notice h3,.klaro .context-notice h4,.klaro .context-notice h5,.klaro .context-notice h6,.klaro .cookie-notice h1,.klaro .cookie-notice h2,.klaro .cookie-notice h3,.klaro .cookie-notice h4,.klaro .cookie-notice h5,.klaro .cookie-notice h6{font-family:inherit;font-family:var(--title-font-family, inherit)}.klaro .cookie-modal .cm-link,.klaro .context-notice .cm-link,.klaro .cookie-notice .cm-link{margin-right:0.5em;vertical-align:middle}.klaro .cookie-modal .cm-btn,.klaro .context-notice .cm-btn,.klaro .cookie-notice .cm-btn{color:#fff;color:var(--button-text-color, #fff);background-color:#5c5c5c;background-color:var(--dark2, #5c5c5c);border-radius:4px;border-radius:var(--border-radius, 4px);padding:6px 10px;margin-right:.5em;border-style:none;padding:0.4em;font-size:1em;cursor:pointer}.klaro .cookie-modal .cm-btn:disabled,.klaro .context-notice .cm-btn:disabled,.klaro .cookie-notice .cm-btn:disabled{opacity:0.5}.klaro .cookie-modal .cm-btn.cm-btn-close,.klaro .context-notice .cm-btn.cm-btn-close,.klaro .cookie-notice .cm-btn.cm-btn-close{background-color:#c8c8c8;background-color:var(--light2, #c8c8c8)}.klaro .cookie-modal .cm-btn.cm-btn-success,.klaro .context-notice .cm-btn.cm-btn-success,.klaro .cookie-notice .cm-btn.cm-btn-success{background-color:#1a936f;background-color:var(--green1, #1a936f)}.klaro .cookie-modal .cm-btn.cm-btn-success-var,.klaro .context-notice .cm-btn.cm-btn-success-var,.klaro .cookie-notice .cm-btn.cm-btn-success-var{background-color:#24cc9a;background-color:var(--green2, #24cc9a)}.klaro .cookie-modal .cm-btn.cm-btn-info,.klaro .context-notice .cm-btn.cm-btn-info,.klaro .cookie-notice .cm-btn.cm-btn-info{background-color:#2581c4;background-color:var(--blue1, #2581c4)}.klaro .context-notice{border-radius:4px;border-radius:var(--border-radius, 4px);border-style:solid;border-style:var(--border-style, solid);border-width:1px;border-width:var(--border-width, 1px);border-color:#c8c8c8;border-color:var(--light2, #c8c8c8);background-color:#fafafa;background-color:var(--light1, #fafafa);display:flex;flex-direction:column;flex-wrap:wrap;align-items:center;justify-content:center;padding:12px;height:100%}.klaro .context-notice.cm-dark{background-color:#333;background-color:var(--dark1, #333);border-color:#5c5c5c;border-color:var(--dark2, #5c5c5c)}.klaro .context-notice.cm-dark p{color:#fafafa;color:var(--light1, #fafafa)}.klaro .context-notice.cm-dark p a{color:#459cdc;color:var(--blue2, #459cdc)}.klaro .context-notice p{color:#333;color:var(--dark1, #333);flex-grow:0;text-align:center;padding-top:0;margin-top:0}.klaro .context-notice p a{color:#24cc9a;color:var(--green2, #24cc9a)}.klaro .context-notice p.cm-buttons{margin-top:12px}.klaro .cookie-modal{width:100%;height:100%;position:fixed;overflow:hidden;left:0;top:0;z-index:1000}.klaro .cookie-modal.cm-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;z-index:0}.klaro .cookie-modal.cm-embedded .cm-modal.cm-klaro{position:relative;-ms-transform:none;transform:none}.klaro .cookie-modal .cm-bg{background:rgba(0,0,0,0.5);height:100%;width:100%;position:fixed;top:0;left:0}.klaro .cookie-modal .cm-modal.cm-klaro{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto}@media (min-width: 660px){.klaro .cookie-modal .cm-modal.cm-klaro{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:640px;height:auto;width:auto}}.klaro .cookie-modal .cm-modal .hide{border-style:none;background:none;cursor:pointer;position:absolute;top:20px;right:20px;z-index:1}.klaro .cookie-modal .cm-modal .hide svg{stroke:#fafafa;stroke:var(--light1, #fafafa)}.klaro .cookie-modal .cm-modal .cm-footer{border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);padding:1em}.klaro .cookie-modal .cm-modal .cm-footer-buttons{display:flex;flex-flow:row;justify-content:space-between}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by{font-size:0.8em;padding-top:4px;text-align:right;padding-right:8px}.klaro .cookie-modal .cm-modal .cm-footer .cm-powered-by a{color:#5c5c5c;color:var(--dark2, #5c5c5c)}.klaro .cookie-modal .cm-modal .cm-header{border-bottom-width:1px;border-bottom-width:var(--border-width, 1px);border-bottom-style:solid;border-bottom-style:var(--border-style, solid);border-bottom-color:#5c5c5c;border-bottom-color:var(--dark2, #5c5c5c);padding:1em;padding-right:24px}.klaro .cookie-modal .cm-modal .cm-header h1{margin:0;font-size:2em;display:block}.klaro .cookie-modal .cm-modal .cm-header h1.title{padding-right:20px}.klaro .cookie-modal .cm-modal .cm-body{padding:1em}.klaro .cookie-modal .cm-modal .cm-body ul{display:block}.klaro .cookie-modal .cm-modal .cm-body span{display:inline-block;width:auto}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes{padding:0;margin:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-caret,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-caret{color:#a0a0a0;color:var(--light3, #a0a0a0)}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content{margin-left:-40px;display:none}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose .cm-services .cm-content.expanded,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose .cm-services .cm-content.expanded{margin-top:10px;display:block}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose{position:relative;line-height:20px;vertical-align:middle;padding-left:60px;min-height:40px}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service:first-child,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose:first-child{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p{margin-top:0}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service p.purposes,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose p.purposes{color:#a0a0a0;color:var(--light3, #a0a0a0);font-size:0.8em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service.cm-toggle-all,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose.cm-toggle-all{border-top-width:1px;border-top-width:var(--border-width, 1px);border-top-style:solid;border-top-style:var(--border-style, solid);border-top-color:#5c5c5c;border-top-color:var(--dark2, #5c5c5c);padding-top:1em}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-list-title,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-list-title{font-weight:600}.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-services li.cm-purpose span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-service span.cm-required,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-opt-out,.klaro .cookie-modal .cm-modal .cm-body ul.cm-purposes li.cm-purpose span.cm-required{color:#5c5c5c;color:var(--dark2, #5c5c5c);padding-left:0.2em;font-size:0.8em}.klaro .cookie-notice:not(.cookie-modal-notice){background-color:#333;background-color:var(--dark1, #333);z-index:999;position:fixed;width:100%;bottom:0;right:0}@media (min-width: 1024px){.klaro .cookie-notice:not(.cookie-modal-notice){border-radius:4px;border-radius:var(--border-radius, 4px);position:fixed;position:var(--notice-position, fixed);right:20px;right:var(--notice-right, 20px);left:auto;left:var(--notice-left, auto);bottom:20px;bottom:var(--notice-bottom, 20px);top:auto;top:var(--notice-top, auto);max-width:400px;max-width:var(--notice-max-width, 400px);box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19)}}@media (max-width: 1023px){.klaro .cookie-notice:not(.cookie-modal-notice){border-style:none;border-radius:0}}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded{position:relative;height:inherit;width:inherit;left:inherit;right:inherit;bottom:inherit;z-index:0}.klaro .cookie-notice:not(.cookie-modal-notice).cn-embedded .cn-body{padding-top:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body{margin-bottom:0;margin-right:0;bottom:0;padding:1em;padding-top:0}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p{margin-bottom:0.5em}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body p.cn-changes{text-decoration:underline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-learn-more{display:inline-block;flex-grow:1}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{display:inline-block;margin-top:-0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons{width:100%}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{margin-top:0.5em}@media (max-width: 384px){.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-buttons button.cm-btn{width:calc(50% - .5em)}}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok{margin-top:-0.5em;display:flex;flex-flow:row;flex-wrap:wrap;justify-content:right;align-items:baseline}.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok a,.klaro .cookie-notice:not(.cookie-modal-notice) .cn-body .cn-ok div{margin-top:0.5em}.klaro .cookie-modal-notice{background-color:#333;background-color:var(--dark1, #333);color:#fafafa;color:var(--light1, #fafafa);z-index:1001;box-shadow:0 4px 6px 0 rgba(0,0,0,0.2),5px 5px 10px 0 rgba(0,0,0,0.19);width:100%;max-height:98%;top:50%;-ms-transform:translateY(-50%);transform:translateY(-50%);position:fixed;overflow:auto;padding:1em;padding-top:0.2em}@media (min-width: 400px){.klaro .cookie-modal-notice{border-radius:4px;border-radius:var(--border-radius, 4px);position:relative;margin:0 auto;max-width:400px;height:auto;width:auto}}.klaro .cookie-modal-notice .cn-ok{display:flex;flex-flow:row;justify-content:space-between;align-items:center;margin-top:1em}.klaro .cookie-notice-hidden{display:none !important}
+</style></head>
+<body id="top" class="" data-new-gr-c-s-check-loaded="14.1087.0" data-gr-ext-installed="">
+<div class="wrapper">
+<!-- Header -->
+<header id="header">
+<div class="container">
+<div class="row">
+<div class="col-md-4 col-xs-6">
+<a href="https://www.en.silicann.com/" class="logo"><img src="./Converting Wavelengths to RGB color values_files/logo.svg" alt="www.en.silicann.com (englische Seite)"></a>
+</div>
+<div class="col-md-8 hidden-sm hidden-xs">
+<nav class="mod_navigation block pull-right lang-switch">
+<ul class="level_1">
+<li class="sibling en" style="display:none">
+<a href="https://www.en.silicann.com/" title="Switch to English site">ENGLISH</a>
+</li>
+<li class="sibling de" style="display: inline-block;">
+<a href="https://www.silicann.com/" title="Auf deutschsprachige Seite wechseln">DEUTSCH</a>
+</li>
+</ul>
+</nav>
+<!-- indexer::stop -->
+<nav class="mod_navigation block">
+<ul class="level_1">
+    <li class="submenu first " "="">
+
+    <a href="https://www.en.silicann.com/color-sensors" title="Color Sensors" class="submenu sibling first  
+    aria-haspopup=" true"="">Products</a>
+    <ul class="level_2">
+        <li class="first">
+            <a href="https://www.en.silicann.com/color-sensors" title="Color Sensors" class="primary">Color Sensors</a>
+        </li>
+        <li>
+            <a href="https://www.en.silicann.com/color-sensors/cfo-color-sensors" title="CFO Farbsensoren" class="secondary">CFO Color Sensors</a>
+        </li>
+        <li><a href="https://www.en.silicann.com/color-sensors/applications" title="Color sensor applications" class="secondary">Applications</a></li>
+        <li>
+            <a href="https://www.en.silicann.com/spectrometers" title="Spectrometers" class="primary">Spectrometers</a>
+        </li>
+        <li>
+            <a href="https://www.en.silicann.com/laser-displacement-sensors" title="Laser displacement sensors" class="primary">Laser Displacement Sensors</a>
+        </li>
+        <li class="last">
+            <a href="https://www.en.silicann.com/spectrometers/sales" title="Sales" class="primary">Sales</a>
+        </li>
+
+        </ul>
+    </li>
+    <li class="sibling ">
+        <a href="https://www.en.silicann.com/company" title="Company" class="sibling">Company</a>
+    </li>
+    <li class="sibling trail">
+        
+        <a href="https://www.en.silicann.com/blog" title="blog" class="sibling">Blog</a>
+    </li>
+    <li class="sibling last ">
+        <a href="https://www.en.silicann.com/color-sensors/sales" title="Contact" class="sibling last">Contact</a>
+    </li>
+</ul>
+<a id="skipNavigation1" class="invisible">&nbsp;</a>
+</nav><!-- indexer::continue -->
+</div>
+<div class="col-xs-6 visible-xs visible-sm">
+<button type="button" class="btn btn-link navbar-toggle collapsed pull-right" data-toggle="modal" data-target="#menuModal"> <div data-icon="m" class="icon mopen"></div></button>
+<nav class="mod_navigation block pull-right lang-switch">
+<ul class="level_1">
+<li class="sibling en" style="display:none">
+<a href="https://www.en.silicann.com/" title="Switch to English site">ENGLISH</a>
+</li>
+<li class="sibling de" style="display: inline-block;">
+<a href="https://www.silicann.com/" title="Auf deutschsprachige Seite wechseln">DEUTSCH</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</header>
+<div id="content">
+    <div class="container">
+        <div class="row">
+            <div class="main-col col-sm-12">
+                <div class="mod_article first last block">
+                    <div class="mod_newsreader block">
+                        <div class="layout_full block">
+                            <p class="info">
+<time datetime="2021-04-01T00:00:00+00:00">01.04.2021</time>                            </p>
+                            <h1>Converting Wavelengths to RGB color values</h1>
+                            <div class="ce_text block">
+                            <p><img alt="" src="./Converting Wavelengths to RGB color values_files/wellenlaenge-farbe.jpg"></p>
+<p><em>Visible light</em> is essentially just a name for a very specific spectrum of electromagnetic 
+radiation.
+The wavelengths that we can see with our eyes are between approx. 400 nm and 780 nm.
+UV light, which is invisible to us, begins at below 400 nm. The longer-wave infrared radiation 
+starts at wavelengths greater than 780nm. Infrared light is not visible to our eyes, 
+but our skin can perceive it as warmth. </p>
+<h2>Wavelength as RGB color</h2>
+<p>This visualization illustrates what a certain wavelength looks like as an RGB value.
+It should be noted that the RGB color space is significantly smaller than the space that our 
+eyes can actually see. 
+In other words: in the real world we can perceive colors that cannot be represented in RGB space. </p>
+<style>
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.outer {
+    margin-bottom: 20px;
+}
+
+.unit {
+    position: relative;
+    display: inline;
+    line-height:36px;
+
+}
+
+.unit::after {
+    position: absolute;
+    right: 30px;
+    top: 0px;
+    line-height: 22px;
+}
+
+.nm::after {
+    content: "nm";
+}
+
+.rgbouter {
+    margin-left: 40px;
+}
+
+.rgbouter, .unit {
+    font-weight: bold;
+}
+
+
+
+#wavelength {
+    width: 95px;
+    padding-left: 5px;
+}
+</style>
+
+<div class="outer">
+<div class="unit nm">
+<label for="wavelength">Select wavelength: </label>
+ <input type="number" size="6" value="380" min="380" max="780" id="wavelength">
+</div>
+ <span class="rgbouter">RGB color value: <span id="rgbvalue">#4d004d</span></span>
+</div>
+
+<canvas id="canvas" width="400" height="150"></canvas>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+let wavelengthToRGB = function(wavelength) {
+    let R = 0
+    let G = 0
+    let B = 0
+
+    // core translation into color
+    if (wavelength >= 380 && wavelength <= 440) {
+        R = -1*(wavelength-440)/(440-380)
+        G = 0
+        B = 1
+    } else 
+    if (wavelength > 440 && wavelength <= 490) {
+        R = 0
+        G = (wavelength-440)/(490-440)
+        B = 1
+    } else 
+    if (wavelength > 490 && wavelength <= 510) {
+        R = 0
+        G = 1
+        B = -1*(wavelength-510)/(510-490)
+    } else 
+    if (wavelength > 510 && wavelength <= 580) {
+        R = (wavelength-510)/(580-510)
+        G = 1
+        B = 0
+    } else 
+    if (wavelength > 580 && wavelength <= 645) {
+        R = 1
+        G = -1*(wavelength-645)/(645-580)
+        B = 0
+    } else 
+    if (wavelength > 645 && wavelength <= 780) {
+        R = 1
+        G = 0
+        B = 0
+    }
+
+
+    // intensity adjustment near the vision limits
+    let intensity = 1
+    if (wavelength >= 700) {
+        intensity = 0.3 + 0.7*(780-wavelength)/(780-700)
+    } else
+    if (wavelength < 420) {
+        intensity = 0.3 + 0.7*(wavelength-380)/(420-380)
+    }
+    console.log("intensity:", intensity)
+
+
+    return [
+        Math.round(R*intensity*255),
+        Math.round(G*intensity*255),
+        Math.round(B*intensity*255)
+    ]
+}
+
+let rgbArrayToHex = function(rgb) {
+    let padding = 2
+    for (var i=0; i<rgb.length; i++) {
+        rgb[i] = rgb[i].toString(16);
+        while (rgb[i].length < padding) {
+            rgb[i] = "0" + rgb[i]
+        }
+    }
+    return rgb
+}
+
+let hexArrayToColorDefinition = function(rgb) {
+    result = "#"
+    for (var i=0; i < rgb.length; i++) {
+        result = result + rgb[i]
+    }
+    return result
+}
+
+
+let updateCanvas = function (fillstyle) {
+    let canvas = document.getElementById("canvas")
+    let ctx = canvas.getContext("2d")
+    ctx.fillStyle = fillstyle
+    ctx.fillRect(0,0,800,100)
+}
+
+let onInput = function(ev) {
+    let wavelength = parseInt(ev.data)
+
+    // inputText events don't return the complete data
+    if (ev.inputType != "insertReplacementText") {
+        wavelength = ev.target.value
+            //.getAttribute("value")
+        wavelength = parseInt(wavelength)
+    }
+
+    let rgb = wavelengthToRGB(wavelength)
+    rgb = rgbArrayToHex(rgb)
+    rgb = hexArrayToColorDefinition(rgb)
+    updateCanvas(rgb)
+
+    let rgbspan = document.getElementById("rgbvalue")
+    rgbspan.innerText = rgb
+}
+
+document.getElementById("wavelength")
+    .addEventListener('input', onInput);
+
+onInput({'data':380, "inputType":"insertReplacementText"})
+
+});
+</script>
+
+<p>The algorithm is orginally from <a href="http://www.physics.sfasu.edu/astro/color/spectra.html">Dan Bruton</a> 
+and has been translated here for display in the browser.</p>
+<h2>Why are red, green and blue enough to represent so many colors?</h2>
+<p>This translation of wavelengths into RGB color hues works because it approximates the 
+functionality of our eyes. There are only three different types of receptors on the retina, 
+each roughly covering the range of red, green and blue:</p>
+<p><img alt="" src="./Converting Wavelengths to RGB color values_files/human_color_sensitivity.png"></p>
+<p>This means we cannot see intermediate hues, especially yellow, directly. This color impression
+only arises in the further processing of the signals that the receptors send to our brain:</p>
+<p><img alt="" src="./Converting Wavelengths to RGB color values_files/metamerism_interconnection_of_cones_in_the_human_eye.png"></p>
+<p>So we always perceive yellow when the receptors for green and red have been activated approximately 
+equally by the incident radiation.</p>
+<p>In the border regions below 420 and above 700 nm, we can only differentiate color tones very 
+imprecisely, which is why these areas are displayed with a lower color intensity in the visualization. </p>
+<h2>Wavelengths of the rainbow colors</h2>
+<p>With the help of the visualization we can also determine the wavelengths of individual colors.
+The classic rainbow colors have roughly the following values:</p>
+<p>Wavelength of violet light: approx. 400 nm, entire violet spectrum approx. 380-420 nm </p>
+<p>Wavelength of blue light: approx. 440 nm, entire blue spectrum approx. 420–490 nm</p>
+<p>Wavelength of green light: approx. 510 nm, entire green spectrum approx. 490–575 nm</p>
+<p>Wavelength of yellow light: approx. 580 nm, entire yellow spectrum approx. 575–585 nm</p>
+<p>Wavelength of orange light: approx. 610 nm, entire orange spectrum approx. 585–650 nm</p>
+<p>Wavelength of red light: approx. 645 nm, entire red spectrum approx. 650–750 nm</p>
+<h2>The limits of the RGB color space</h2>
+<p>The RGB color space is well suited, for example, for comparing the quality of different screens 
+with one another. However, it does not cover all the hues that our eyes can perceive.
+And for use in industrial color measurement, it has another disadvantage:
+From two different RGB color values it is not possible to read how far apart the color tones are from
+the numbers alone. 
+However, this is of great importance for many manufacturing processes.
+This is a major reason for the development of the L*A*B* color space. 
+For more information, see the following article on 
+<a href="https://www.en.silicann.com/blog/post/color-scales-industry">color scales and color spaces</a>.</p>
+                            </div>
+<p>&nbsp;</p>
+                        </div>
+                    </div>
+<div class="mod_newsreader block">
+    <div class="layout_full block">
+        <h2>You might also like</h2>
+<div class="col-md-3">
+    <figure class="image_container">
+        <a href="https://www.en.silicann.com/blog/post/convert-wavenumber-wavelength">
+        <img src="./Converting Wavelengths to RGB color values_files/wellenzahl-in-wellenlaenge-umrechnen.jpg">
+        </a>
+    </figure>
+    <div>
+        <h4><a href="https://www.en.silicann.com/blog/post/convert-wavenumber-wavelength">Convert Wavenumber to Wavelength</a></h4>
+        
+    </div>
+</div><div class="col-md-3">
+    <figure class="image_container">
+        <a href="https://www.en.silicann.com/blog/post/difference-vis-nir-spectroscopy">
+        <img src="./Converting Wavelengths to RGB color values_files/quantitative-analyse.jpg">
+        </a>
+    </figure>
+    <div>
+        <h4><a href="https://www.en.silicann.com/blog/post/difference-vis-nir-spectroscopy">The difference between VIS spectroscopy and NIR spectroscopy</a></h4>
+        
+    </div>
+</div><div class="col-md-3">
+    <figure class="image_container">
+        <a href="https://www.en.silicann.com/blog/post/sunrays-through-clouds">
+        <img src="./Converting Wavelengths to RGB color values_files/sonnenstrahlen.jpg">
+        </a>
+    </figure>
+    <div>
+        <h4><a href="https://www.en.silicann.com/blog/post/sunrays-through-clouds">Sunrays through clouds - how do they arise?</a></h4>
+        
+    </div>
+</div><div class="col-md-3">
+    <figure class="image_container">
+        <a href="https://www.en.silicann.com/blog/post/history-of-spectroscopy">
+        <img src="./Converting Wavelengths to RGB color values_files/spektroskop.jpg">
+        </a>
+    </figure>
+    <div>
+        <h4><a href="https://www.en.silicann.com/blog/post/history-of-spectroscopy">Milestones in the History of Spectroscopy</a></h4>
+        
+    </div>
+</div>    </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="meta">
+<div class="container">
+<div class="row">
+<div class="col-sm-1">
+<a href="https://www.en.silicann.com/#top"><div data-icon="h" class="icon"></div></a>
+</div>
+<div class="col-sm-11">
+<!-- indexer::stop -->
+<nav class="mod_customnav block">
+<a href="https://www.en.silicann.com/templatetest#skipNavigation2" class="invisible">Skip navigation</a>
+<ul class="level_1">
+<li><a href="https://www.en.silicann.com/imprint" title="Imprint">Imprint</a></li>
+<li class="last"><a href="https://www.en.silicann.com/privacy_policy" title="Privacy Policy" class="last" rel="nofollow">Privacy Policy</a></li>
+</ul>
+<a id="skipNavigation2" class="invisible">&nbsp;</a>
+</nav>
+<!-- indexer::continue -->
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-8 col-lg-6">
+<h3 class="ce_headline first">
+Contact</h3>
+<!-- Spaltenset Start //-->
+<section class="ce_colsetStart row equal-md-start colcount_2 bootstrap_customizable col-2">
+<!-- first Column //-->
+<div class="col-sm-6 col_1 first">
+<div class="ce_text block">
+<div class="inner">
+<p>Silicann Systems GmbH <br>Schillerplatz 10 <br>D-18055 Rostock</p>
+</div>
+</div>
+</div>
+<!-- second Column //-->
+<div class="ce_colsetPart col-sm-6 col_2 last">
+<div class="ce_text block">
+<div class="inner">
+<p><span class="contact-line">Phone</span> +49 (0)381 - 36764120 <br><span class="contact-line">Fax</span> +49 (0)381 - 36764129 <br><span class="contact-line">E-Mail</span> <a href="mailto:info@silicann.com" class="email">info@silicann.com</a></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Spaltenset End //-->
+
+</div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ce_image block">
+            <figure class="image_container">
+                <div class="award award-inno2016"></div>
+            </figure>
+        </div>
+        <div class="ce_image block">
+            <figure class="image_container">
+                <div class="award award-inno2018"></div>
+            </figure>
+        </div>
+        <div class="ce_image block">
+            <figure class="image_container">
+                <div class="award award-inno2020"></div>
+            </figure>
+        </div>
+        <div class="ce_image block">
+            <figure class="image_container">
+                <div class="award award-inno2022"></div>
+            </figure>
+        </div>
+        <div class="ce_image block">
+            <figure class="image_container">
+                <div class="award award-advanceduv"></div>
+            </figure>
+        </div>
+    </div>
+</div>
+<!-- indexer::stop -->
+<!-- indexer::continue -->
+<p class="copy">© 2021 Silicann Systems GmbH</p>
+</div>
+</footer></div>
+
+
+
+
+<!-- FULLSCREEN MODAL CODE (.fullscreen) -->
+<div class="modal fade fullscreen" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><div data-icon="j" class="icon mclose"></div> </button>
+<h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
+</div>
+<div class="modal-body text-center">
+<!-- indexer::stop -->
+<nav class="mod_navigation block">
+<ul class="level_1">
+    <li class="submenu first " "="">
+
+    <a href="https://www.en.silicann.com/color-sensors" title="Color Sensors" class="submenu sibling first  
+    aria-haspopup=" true"="">Products</a>
+    <ul class="level_2">
+        <li class="first">
+            <a href="https://www.en.silicann.com/color-sensors" title="Color Sensors" class="primary">Color Sensors</a>
+        </li>
+        <li>
+            <a href="https://www.en.silicann.com/color-sensors/cfo-color-sensors" title="CFO Farbsensoren" class="secondary">CFO Color Sensors</a>
+        </li>
+        <li><a href="https://www.en.silicann.com/color-sensors/applications" title="Color sensor applications" class="secondary">Applications</a></li>
+        <li>
+            <a href="https://www.en.silicann.com/spectrometers" title="Spectrometers" class="primary">Spectrometers</a>
+        </li>
+        <li>
+            <a href="https://www.en.silicann.com/laser-displacement-sensors" title="Laser displacement sensors" class="primary">Laser Displacement Sensors</a>
+        </li>
+        <li class="last">
+            <a href="https://www.en.silicann.com/spectrometers/sales" title="Sales" class="primary">Sales</a>
+        </li>
+
+        </ul>
+    </li>
+    <li class="sibling ">
+        <a href="https://www.en.silicann.com/company" title="Company" class="sibling">Company</a>
+    </li>
+    <li class="sibling trail">
+        
+        <a href="https://www.en.silicann.com/blog" title="blog" class="sibling">Blog</a>
+    </li>
+    <li class="sibling last ">
+        <a href="https://www.en.silicann.com/color-sensors/sales" title="Contact" class="sibling last">Contact</a>
+    </li>
+</ul>
+<a id="skipNavigation1" class="invisible">&nbsp;</a>
+</nav><!-- indexer::continue -->
+<div class="contact-data">
+<h3 class="ce_headline first">
+Kontakt</h3>
+<!-- Spaltenset Start //-->
+<section class="ce_colsetStart row equal-md-start colcount_2 bootstrap_customizable col-2">
+<!-- first Column //-->
+<div class="col-sm-6 col_1 first">
+<div class="ce_text block">
+<div class="inner">
+<p>Silicann Systems GmbH <br>Schillerplatz 10 <br>D-18055 Rostock</p>
+</div>
+</div>
+</div>
+<!-- second Column //-->
+<div class="ce_colsetPart col-sm-6 col_2 last">
+<div class="ce_text block">
+<div class="inner">
+<p><span class="contact-line">Telefon</span> +49 (0)381 - 36764120 <br><span class="contact-line">Telefax</span> +49 (0)381 - 36764129 <br><span class="contact-line">E-Mail</span> <a href="mailto:info@silicann.com" class="email">info@silicann.com</a></p>
+</div>
+</div>
+</div>
+</section>
+<!-- Spaltenset End //-->
+</div>
+</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.fullscreen -->
+
+
+
+<script src="./Converting Wavelengths to RGB color values_files/domscript.min.js.download"></script>
+<script type="text/javascript">
+  var _paq = window._paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//piwik.silicann.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '5']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<script type="text/javascript">
+var browserLang=navigator.language||navigator.userLanguage;
+browserLang=browserLang.substr(0,2);
+var siteLang=window.location.hostname.replace("www.","").substr(0,2) == "en" ? "en" : "de";
+var selector='nav.lang-switch li.';
+var langSuffix=(siteLang=="de")?"en":"de";
+$(selector+langSuffix).each(function(idx,elem){$(elem).css('display','inline-block')});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(event) {
+})
+</script>
+
+<div id="klaro" style="--notice-bottom:20px; --notice-top:auto; --green1:#e18800; --green2:#ff9b00; --blue1:#406a88; --button-text-color:#fff;"><div lang="en" class="klaro"><div class="cookie-notice   "><div class="cn-body"><p><span><span>Hi! Could we please enable some additional services for </span><strong>Analytics (anonymous) &amp; Marketing</strong><span>? You can always change or withdraw your consent later.</span></span></p><div class="cn-ok"><a class="cm-link cn-learn-more" href="https://www.en.silicann.com/#">Let me choose</a><div class="cn-buttons"><button class="cm-btn cm-btn-danger cn-decline" type="button">I decline</button><button class="cm-btn cm-btn-success" type="button">That's ok</button></div></div></div></div></div></div></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

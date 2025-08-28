@@ -1,0 +1,18 @@
+(Fiji Is Just) ImageJ 2.3.0/1.53q; Java 1.8.0_322 [64-bit]; Windows 10 10.0; 135MB of 5935MB (2%)
+ 
+Title: fall.tiff
+Width:  3024 pixels
+Height:  4032 pixels
+Size:  47MB
+Pixel size: 1x1 pixel^2
+ID: -21
+Bits per pixel: 32 (RGB)
+No threshold
+Magnification: 0.17
+ScaleToFit: false
+Uncalibrated
+Path: C:\Users\ASUS\Desktop\INF250\Codes\L01\fall.tiff
+Screen location: 36,48 (1536x864)
+No properties
+No overlay
+No selection
