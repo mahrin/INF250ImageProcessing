@@ -16,8 +16,12 @@ Work with hyperspectral data of NMBU buildings: visualize wavebands, analyze spe
 ---
 
 📄 **Full Exam Questions:**  
-[INF250_exam2022_question.pdf](https://github.com/mahrin/INF250_image_processing/blob/408d9fed64eb3ca8bba6bc5f0eacda413621f079/Assignments/Exam2022_Code/questions_with_images/INF250_exam2022_question.pdf)
+[INF250_exam2022_question.pdf](https://github.com/mahrin/INF250_image_processing/blob/f1c4c5aef72aecb377ad396dbd3c2aa848f30110/Assignments/Exam2022_Code/questions_with_images/INF250_exam2022_question.pdf)
+
+
 
 
 📄 **Full Exam Solution with details:**  
-[INF250_exam2022_solution](https://github.com/mahrin/INF250_image_processing/tree/408d9fed64eb3ca8bba6bc5f0eacda413621f079/Assignments/Exam2022_Code/solutions_with_comments)
+[INF250_exam2022_solution](https://github.com/mahrin/INF250_image_processing/tree/f1c4c5aef72aecb377ad396dbd3c2aa848f30110/Assignments/Exam2022_Code/solutions_with_comments)
+
+
