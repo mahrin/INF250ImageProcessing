@@ -2,6 +2,8 @@
 
 This project demonstrates an implementation of **Otsu’s thresholding algorithm** from scratch in Python.  
 
+![Assignment 3 Preview](A1.png)
+
 ### What it does
 - Loads the input image (`gingerbreads.jpg`)
 - Computes its histogram (256 bins)
