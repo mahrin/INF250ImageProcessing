@@ -3,6 +3,8 @@
 ### Task  
 Using **image analysis**, this project processes the image `IMG_2754_nonstop_alltogether.JPG` to automatically distinguish between **M&Ms and Non Stops (whole and broken)** based on their shapes and geometric properties.  
 
+![Assignment 2 Preview](A2.png)
+
 ### Approach  
 1. **Preprocessing & Cropping** – Load the RGB and grayscale versions of the image, crop to the relevant region.  
 2. **Thresholding** – Apply global thresholding (Triangle method) to create a binary mask.  
