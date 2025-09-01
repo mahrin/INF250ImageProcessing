@@ -3,6 +3,9 @@
 ### Task  
 Analyze the hyperspectral image `sandvika.npy` to explore different methods for **vegetation detection and classification**, including NDVI, PCA, and K-means clustering.
 
+![Assignment 3 Preview](Assignments/Assignment03/A3.png)
+
+
 ### Workflow  
 1. **Loading Data**  
    - Read hyperspectral cube (`.npy`) and corresponding header (`Visnir.hdr`).  
