@@ -1,5 +1,10 @@
 # Exercise 3 – Hyperspectral Image Analysis (nmbu.npy)
 
+![Exam Task 3 Preview](EXAMT1.png)
+
+
+
+
 ### Part (a) – Load & Display (5p)
 - Load `nmbu.npy` and `nmbu.hdr`.  
 - Display RGB by selecting 3 wavebands (report bands + wavelengths).  
